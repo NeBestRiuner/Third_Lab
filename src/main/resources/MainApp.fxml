@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ru.brigada.javaFX.Controller.MainController">
+   <children>
+      <VBox fx:id="vBox" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <VBox prefHeight="186.0" prefWidth="900.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Добавление точек:" textAlignment="CENTER">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="380.0" />
+                     </VBox.margin>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Координата X:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="150.0" right="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="textFieldX">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Координата Y:" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="textFieldY" layoutX="32.0" layoutY="10.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Выбор цвета: " textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="150.0" right="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <ColorPicker fx:id="colorChoser" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Диаметр точки:" textAlignment="CENTER">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="60.0" right="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <TextField fx:id="textFieldDiam">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
+                  <Button fx:id="pointPlace" mnemonicParsing="false" onAction="#pointPlaceM" text="Поставить точку" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="400.0" />
+                     </VBox.margin>
+                  </Button>
+               </children></VBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
