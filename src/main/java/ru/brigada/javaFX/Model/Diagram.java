@@ -1,5 +1,6 @@
 package ru.brigada.javaFX.Model;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Paint;
 import javafx.scene.shape.Line;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
@@ -13,6 +14,8 @@ public class Diagram extends Pane {
     private Text text;
     private double xMax = 220;
     private double yMax = 100;
+    private double colorMax = 1512;
+    private double diamMax = 220;
     public Diagram(){
         this.setPrefHeight(415);
         this.setPrefWidth(900);
@@ -55,18 +58,29 @@ public class Diagram extends Pane {
             i++;
         }
     }
-    public void changeMashtab(double xMax, double yMax){
+    public void changeMashtab(Point pointM){
+        double xMax=pointM.getX();
+        double yMax=pointM.getY();
+        double colorMax=pointM.getColor();
+        double diamMax=pointM.getDiameter();
         if(this.xMax<xMax)
         this.xMax=xMax;
         if(this.yMax<yMax)
         this.yMax=yMax;
+        if(this.colorMax<colorMax){this.colorMax=colorMax;}
+        if(this.diamMax<diamMax) this.diamMax=diamMax;
         ListIterator<Point> iter = pointList.listIterator();
         double cX = this.xMax/22;
         double cY = this.yMax/10;
+        double cD = this.diamMax/22;
+        double cColor=this.colorMax/1512;
         while (iter.hasNext()) {
             Point point = iter.next();
             point.setCenterX(31*point.getX()/(cX)+100);
             point.setCenterY(-(31*point.getY()/cY)+360);
+            point.setRadius((point.getDiameter()/cD)/2);
+
+            point.setFill((Paint)point.transDoubleToColor(point.getColor()/(cColor)));
         }
         int i = 1;
         while(i<10){
@@ -89,6 +103,12 @@ public class Diagram extends Pane {
     public double getyMax() {
         return yMax;
     }
+    public double getColorMax(){return colorMax;}
+
+    public double getDiamMax() {
+        return diamMax;
+    }
+
     public List<Point> getPointList() {
         return pointList;
     }

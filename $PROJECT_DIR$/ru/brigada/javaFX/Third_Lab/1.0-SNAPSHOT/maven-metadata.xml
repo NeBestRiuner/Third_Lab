@@ -3,33 +3,33 @@
   <groupId>ru.brigada.javaFX</groupId>
   <artifactId>Third_Lab</artifactId>
   <versioning>
-    <lastUpdated>20231227054510</lastUpdated>
+    <lastUpdated>20231228035345</lastUpdated>
     <snapshot>
-      <timestamp>20231227.054510</timestamp>
-      <buildNumber>28</buildNumber>
+      <timestamp>20231228.035345</timestamp>
+      <buildNumber>82</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20231227.054510-28</value>
-        <updated>20231227054510</updated>
+        <value>1.0-20231228.035345-82</value>
+        <updated>20231228035345</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20231227.054510-28</value>
-        <updated>20231227054510</updated>
+        <value>1.0-20231228.035345-82</value>
+        <updated>20231228035345</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>shaded</classifier>
         <extension>jar</extension>
-        <value>1.0-20231227.054510-28</value>
-        <updated>20231227054510</updated>
+        <value>1.0-20231228.035345-82</value>
+        <updated>20231228035345</updated>
       </snapshotVersion>
       <snapshotVersion>
         <classifier>shaded-sources</classifier>
         <extension>jar</extension>
-        <value>1.0-20231227.054510-28</value>
-        <updated>20231227054510</updated>
+        <value>1.0-20231228.035345-82</value>
+        <updated>20231228035345</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>
